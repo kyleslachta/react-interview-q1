@@ -34,6 +34,7 @@ function App() {
     setLocation(e.target.value)
   }
 
+  // Check to make sure the name is valid and poupulated as well as the location then reset everything
   const onAdd = (e) => {
     e.preventDefault();
     if (name && nameValid && location !== 'Select a location') {
@@ -47,6 +48,7 @@ function App() {
     }
   }
 
+  // Reset all values
   const onClear = (e) => {
     e.preventDefault();
     setName('')
