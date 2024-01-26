@@ -1,5 +1,78 @@
 .App {
-  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 100px;
+  padding-bottom: 70px
+}
+
+.input-error-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.name-input {
+  display: flex;
+  padding-left: 15px;
+}
+
+.name-error {
+  color: red;
+  padding-top: 10px;
+}
+
+.name {
+  padding-right: 10px;
+}
+
+.location-input {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.location-option {
+  width: 50%
+}
+
+.add-clear {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.add {
+  margin-right: 15px;
+  box-shadow: #282c34;
+}
+
+.input-field {
+  width: 100%;
+}
+
+.table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%
+}
+
+.table-header {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: gray;
+  text-align: left;
+}
+
+.table-cell {
+  border: 1px solid black;
+  border-collapse: collapse
+}
+
+.table-row--row:nth-of-type(odd) {
+  background-color: lightgray;
+}
+
+.table-row--row:nth-of-type(even) {
+  background-color: white;
 }
 
 .App-logo {
