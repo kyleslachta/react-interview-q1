@@ -7,14 +7,14 @@ function App() {
   const [name, setName] = useState('')
   const [nameValid, setNameValid] = useState(true)
   const [locations, setLocations] = useState([])
-  const [location, setLocation] = useState('Canada')
+  const [location, setLocation] = useState('Select a location')
   const [tableVals, setTableVals] = useState([])
 
   // Fetch the location when page loads and set to state var for later use
   useEffect(() => {
     const fetchData = async () => {
       const locationsGet = await getLocations()
-      setLocations(locationsGet);
+      setLocations(['Select a location', ...locationsGet]);
     }
   
     fetchData().catch(console.error);
@@ -28,6 +28,7 @@ function App() {
     setNameValid(result)
   }
 
+  // Update the location state var when the name changes
   const onLocationChange = (e) => {
     e.preventDefault();
     setLocation(e.target.value)
@@ -35,21 +36,21 @@ function App() {
 
   const onAdd = (e) => {
     e.preventDefault();
-    if (name && nameValid) {
+    if (name && nameValid && location !== 'Select a location') {
       const val = {
         name: name,
         location: location
       }
       setTableVals([...tableVals, val])
       setName('')
-      setLocation('Canada')
+      setLocation('Select a location')
     }
   }
 
   const onClear = (e) => {
     e.preventDefault();
     setName('')
-    setLocation('Canada')
+    setLocation('Select a location')
     setTableVals([])
   }
 
