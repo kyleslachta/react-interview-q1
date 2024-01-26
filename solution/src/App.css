@@ -67,11 +67,11 @@
   border-collapse: collapse
 }
 
-.table-row--row:nth-of-type(odd) {
-  background-color: lightgray;
+.table-row {
+  background-color: rgba(216, 209, 209, 0.712);
 }
 
-.table-row--row:nth-of-type(even) {
+.table-row:nth-of-type(even) {
   background-color: white;
 }
 
